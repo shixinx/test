@@ -1,0 +1,17 @@
+stages:
+  - publish
+
+release:
+  variables:
+    GIT_STRATEGY: clone
+
+  stage: publish
+  script:
+  
+    - PATCH=$CI_SERVER_VERSION_PATCH
+    - echo $CI_SERVER_VERSION_PATCH
+    
+  after_script:
+  - echo after script phase.
+ 
+ 
